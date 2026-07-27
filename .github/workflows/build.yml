@@ -23,6 +23,9 @@ jobs:
     - name: Set up MSVC Developer Command Prompt
       uses: ilammy/msvc-dev-cmd@v1.13.0
 
+    - run: |
+        dir /S
+        
     - name: Build 
       run: |
         mkdir build
