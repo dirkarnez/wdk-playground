@@ -39,6 +39,7 @@ if(DEFINED ENV{WDKContentRoot})
         "$ENV{WDKContentRoot}/Include/*/km/ntddk.h" # WDK 10
         "$ENV{WDKContentRoot}/Include/km/ntddk.h" # WDK 8.0, 8.1
     )
+    message("!!A $ENV{WDKContentRoot}")
 else()
     file(GLOB WDK_NTDDK_FILES
         "C:/Program Files*/Windows Kits/*/Include/*/km/ntddk.h" # WDK 10
@@ -46,7 +47,9 @@ else()
     )
 endif()
 
+message("!!B")
 if(WDK_NTDDK_FILES)
+    message("!!C ${WDK_NTDDK_FILES}")
     if (NOT CMAKE_VERSION VERSION_LESS 3.18.0)
         list(SORT WDK_NTDDK_FILES COMPARE NATURAL) # sort to use the latest available WDK
     endif()
