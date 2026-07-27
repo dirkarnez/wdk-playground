@@ -26,6 +26,14 @@ jobs:
       uses: ilammy/msvc-dev-cmd@v1.13.0
 
     - shell: cmd
+      working-directory: FindWDK
+      run: |
+        mkdir build-out
+        cd build-out
+        cmake ..
+        MSBuild.exe FindWDK.sln
+
+    - shell: cmd
       run: |
         dir /S
 
