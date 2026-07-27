@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-wdk_add_driver(simple KMDF simple.c)
+wdk_add_driver(simple simple.c)
 
 # target_include_directories(KmdfCppLib INTERFACE .)
 
