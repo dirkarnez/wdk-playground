@@ -36,7 +36,7 @@
 
 if(DEFINED ENV{WDKContentRoot})
     file(GLOB WDK_NTDDK_FILES
-        "$ENV{WDKContentRoot}/Include/*/km/ntddk.h" # WDK 10
+        "$ENV{WDKContentRoot}/Include/*/km/**/ntddk.h" # WDK 10
         "$ENV{WDKContentRoot}/Include/km/ntddk.h" # WDK 8.0, 8.1
     )
     message("!!A $ENV{WDKContentRoot}")
@@ -48,6 +48,7 @@ else()
 endif()
 
 message("!!B ${WDK_NTDDK_FILES}")
+
 if(WDK_NTDDK_FILES)
     message("!!C ${WDK_NTDDK_FILES}")
     if (NOT CMAKE_VERSION VERSION_LESS 3.18.0)
