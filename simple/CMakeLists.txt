@@ -4,6 +4,6 @@ wdk_add_driver(simple STATIC KMDF 1.15
     simple.c
 )
 
-target_include_directories(KmdfCppLib INTERFACE .)
+# target_include_directories(KmdfCppLib INTERFACE .)
 
-target_link_libraries(simple KmdfCppLib)
+# target_link_libraries(simple KmdfCppLib)
