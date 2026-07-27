@@ -25,6 +25,9 @@ jobs:
     - name: Set up MSVC Developer Command Prompt
       uses: ilammy/msvc-dev-cmd@v1.13.0
 
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v3
+      
     - shell: cmd
       working-directory: FindWDK
       run: |
@@ -32,7 +35,7 @@ jobs:
         cd build-out
         cmake ..
         dir /S
-        MSBuild.exe FindWDK.sln
+        MSBuild.exe FindWDK.slnx
 
     - shell: cmd
       run: |
