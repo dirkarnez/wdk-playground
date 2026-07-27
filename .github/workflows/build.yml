@@ -32,7 +32,8 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -G Ninja ..
+        set CD_LINUX=%CD:\=/%
+        cmake -DWDK_ROOT="%CD_LINUX%/Microsoft.Windows.WDK.x64.10.0.26100.6584" -G Ninja .. 
         cmake --build . --config Debug --target simple
         
     - run: |
