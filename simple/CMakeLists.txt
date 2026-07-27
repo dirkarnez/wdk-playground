@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-wdk_add_driver(simple STATIC KMDF 1.15
+wdk_add_driver(simple KMDF 1.15
     simple.c
 )
 
