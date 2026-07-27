@@ -34,6 +34,7 @@ jobs:
       run: |
         set CD_LINUX=%CD:\=/%
         set WDKContentRoot="%CD_LINUX%/Microsoft.Windows.WDK.x64.10.0.26100.6584/c"
+        echo %WDKContentRoot%
         mkdir build
         cd build
         cmake -G Ninja .. 
