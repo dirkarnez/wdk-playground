@@ -2,7 +2,11 @@ wdk-playground
 ==============
 <kbd>[**vscode-web-action**](https://github.com/dirkarnez/vscode-web-action/actions/workflows/vscode-web.yml)</kbd><br>
 
-[Install the WDK using NuGet - Windows drivers | Microsoft Learn](https://learn.microsoft.com/en-us/windows-hardware/drivers/install-the-wdk-using-nuget)
+Based on [manurautela/findwdk-simple: Simple driver using FindWdk for building windows driver with cmake from cmdline.](https://github.com/manurautela/findwdk-simple)
+- [building windows driver with cmake and wdk from cmdline - let’s start walk @CR3](https://manurautela.github.io/driver,/wdk,/cmake,/build,/windows/building-windows-driver-with-cmake-and-wdk-cmdline)
+
+### WDK
+- [Install the WDK using NuGet - Windows drivers | Microsoft Learn](https://learn.microsoft.com/en-us/windows-hardware/drivers/install-the-wdk-using-nuget)
 
 ### Tutorials
 - [Write a Hello World Windows Driver (Kernel-Mode) - Windows drivers | Microsoft Learn](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/writing-a-very-small-kmdf--driver)
