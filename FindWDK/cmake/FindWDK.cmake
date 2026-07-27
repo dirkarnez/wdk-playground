@@ -35,28 +35,8 @@
 #
 
 
-# Microsoft.Windows.WDK.x64.10.0.26100.6584\c\Include\10.0.26100.0
-if(DEFINED ENV{WDKContentRoot})
-    file(GLOB_RECURSE WDK_NTDDK_FILES
-        "$ENV{WDKContentRoot}/Include/10.0.26100.0/km/*.h" # WDK 10
-    )
-    message("!!A ${WDK_NTDDK_FILES}")
-else()
-    file(GLOB_RECURSE WDK_NTDDK_FILES
-        "C:/Program Files*/Windows Kits/*/Include/*/km/ntddk.h" # WDK 10
-        "C:/Program Files*/Windows Kits/*/Include/km/ntddk.h" # WDK 8.0, 8.1
-    )
-endif()
 
-message("!!B ${WDK_NTDDK_FILES}")
-
-if(WDK_NTDDK_FILES)
-    message("!!C ${WDK_NTDDK_FILES}")
-    if (NOT CMAKE_VERSION VERSION_LESS 3.18.0)
-        list(SORT WDK_NTDDK_FILES COMPARE NATURAL) # sort to use the latest available WDK
-    endif()
-    list(GET WDK_NTDDK_FILES -1 WDK_LATEST_NTDDK_FILE)
-endif()
+set(WDK_LATEST_NTDDK_FILE "$ENV{WDKContentRoot}/Include/10.0.26100.0/km/ntddk.h") # WDK 10
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(WDK REQUIRED_VARS WDK_LATEST_NTDDK_FILE)
