@@ -30,7 +30,8 @@ jobs:
         dir /S
 
   # D:\a\wdk-playground\wdk-playground\Microsoft.Windows.WDK.x64.10.0.26100.6584\c\Include\10.0.26100.0\km
-    - name: Build 
+    - name: Build
+      shell: cmd
       run: |
         set CD_LINUX=%CD:\=/%
         set WDKContentRoot="%CD_LINUX%/Microsoft.Windows.WDK.x64.10.0.26100.6584/c"
