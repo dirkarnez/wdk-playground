@@ -18,7 +18,7 @@ jobs:
     - name: Setup NuGet.exe
       uses: nuget/setup-nuget@v3
         
-    - run: nuget install Microsoft.Windows.WDK.x64 --version 10.0.26100.6584
+    - run: nuget install Microsoft.Windows.WDK.x64 -Version 10.0.26100.6584
     
     - name: Set up MSVC Developer Command Prompt
       uses: ilammy/msvc-dev-cmd@v1.13.0
