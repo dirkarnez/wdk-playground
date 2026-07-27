@@ -37,7 +37,7 @@
 
 if(DEFINED ENV{WDKContentRoot})
     file(GLOB_RECURSE WDK_NTDDK_FILES
-        "$ENV{WDKContentRoot}/Include/*/km/ntddk.h" # WDK 10
+        "$ENV{WDKContentRoot}/Include/*/km/*.h" # WDK 10
     )
     message("!!A $ENV{WDKContentRoot} ${WDK_NTDDK_FILES}")
 else()
