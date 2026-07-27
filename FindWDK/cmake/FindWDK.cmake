@@ -35,11 +35,12 @@
 #
 
 
+# Microsoft.Windows.WDK.x64.10.0.26100.6584\c\Include\10.0.26100.0
 if(DEFINED ENV{WDKContentRoot})
     file(GLOB_RECURSE WDK_NTDDK_FILES
-        "$ENV{WDKContentRoot}/Include/*/km/*.h" # WDK 10
+        "$ENV{WDKContentRoot}/Include/10.0.26100.0/km/*.h" # WDK 10
     )
-    message("!!A $ENV{WDKContentRoot} ${WDK_NTDDK_FILES}")
+    message("!!A ${WDK_NTDDK_FILES}")
 else()
     file(GLOB_RECURSE WDK_NTDDK_FILES
         "C:/Program Files*/Windows Kits/*/Include/*/km/ntddk.h" # WDK 10
